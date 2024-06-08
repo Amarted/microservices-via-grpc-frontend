@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DashboardModule } from '../../../../dashboard/dashboard.module';
 import { LayoutModule } from '../../../layout/layout.module';
 
 @Component({
@@ -6,6 +7,7 @@ import { LayoutModule } from '../../../layout/layout.module';
   standalone: true,
   imports: [
     LayoutModule,
+    DashboardModule,
   ],
   templateUrl: './dashboard-page.component.html',
   styleUrl: './dashboard-page.component.sass',
