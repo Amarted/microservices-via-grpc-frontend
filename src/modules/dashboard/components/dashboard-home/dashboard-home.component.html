@@ -1,2 +1,8 @@
 <h1>Greetings form</h1>
 <app-greetings-form (formSubmitted)="sendUsername($event)"></app-greetings-form>
+<small *ngIf="serverResponse" class="d-block mt-3">
+  <code>
+    # Server response:
+    <pre>{{ serverResponse | json }}</pre>
+  </code>
+</small>
