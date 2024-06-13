@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: '<router-outlet />',
 })
-export class AppComponent {
+export class ApplicationComponent {
   public title = 'Client application';
 }

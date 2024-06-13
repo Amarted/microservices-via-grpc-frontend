@@ -10,4 +10,4 @@ import { routes } from './routes';
     RouterModule,
   ],
 })
-export class AppRoutingModule { }
+export class ApplicationRoutingModule { }
