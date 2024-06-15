@@ -26,8 +26,6 @@ export class RegistrationFormComponent {
   public passwordsMatch = true;
 
   public onFormSubmitClick(): void {
-    console.log(this.password, this.repeatedPassword, this.password !== this.repeatedPassword);
-
     this.passwordsMatch = this.password === this.repeatedPassword;
 
     if (this.passwordsMatch) {
