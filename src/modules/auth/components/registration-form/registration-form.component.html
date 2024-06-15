@@ -1,0 +1,36 @@
+<app-centered-layout>
+  <div class="registration-form container">
+    <h1 class="mb-4 row">Registration form</h1>
+    <form (submit)="onFormSubmitClick()">
+
+      <div class="form-floating mb-3 row">
+        <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username" required (ngModelChange)="clearUsernameErrors()">
+        <label for="username">Username</label>
+      </div>
+
+      <div class="form-floating mb-3 row">
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" required (ngModelChange)="clearPasswordErrors()">
+        <label for="password">Passworsd</label>
+      </div>
+
+      <div class="form-floating row">
+        <input type="password" class="form-control" id="repeatedPassword" name="repeatPassword" [(ngModel)]="repeatedPassword" required (ngModelChange)="clearPasswordErrors()">
+        <label for="repeatedPassword">Repeat password</label>
+      </div>
+
+      <div class="row mb-5">
+        <div class="invalid-feedback d-block" *ngIf="!passwordsMatch">
+          Passwords must match.
+        </div>
+        <div class="invalid-feedback d-block" *ngIf="serverError">
+          {{ serverError }}
+        </div>
+      </div>
+     
+
+      <div class="row">
+        <button class="btn btn-primary" type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+</app-centered-layout>
