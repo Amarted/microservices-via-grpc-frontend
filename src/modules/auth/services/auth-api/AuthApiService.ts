@@ -8,6 +8,7 @@ import {
   lastValueFrom,
   share,
 } from 'rxjs';
+import { HttpResponse } from '../../../application/interfaces/HttpResponse';
 
 @Injectable()
 export class AuthApiService {
@@ -15,12 +16,12 @@ export class AuthApiService {
     private http: HttpClient,
   ) { }
 
-  public async registration(requestData: UserRegistrationRequestData): Promise<void> {
-    const request = this.http.post(userRegistrationUrl, requestData)
+  public async registration(requestData: UserRegistrationRequestData): Promise<HttpResponse<void>> {
+    const request = this.http.post<HttpResponse<void>>(userRegistrationUrl, requestData)
       .pipe(
         share(),
       );
 
-    await lastValueFrom(request);
+    return lastValueFrom(request);
   }
 }

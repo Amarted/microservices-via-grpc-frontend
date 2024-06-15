@@ -17,7 +17,7 @@ export interface RegistrationFormData {
 })
 export class RegistrationFormComponent {
   @Input()
-  public serverError: string | null = null;
+  public errorMessage: string | null = null;
   @Output()
   public formSubmitted = new EventEmitter<RegistrationFormData>();
   public username = '';
@@ -43,6 +43,6 @@ export class RegistrationFormComponent {
   }
 
   public clearUsernameErrors(): void {
-    this.serverError = null;
+    this.errorMessage = null;
   }
 }

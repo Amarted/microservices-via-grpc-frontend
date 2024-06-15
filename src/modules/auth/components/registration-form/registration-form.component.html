@@ -22,8 +22,8 @@
         <div class="invalid-feedback d-block" *ngIf="!passwordsMatch">
           Passwords must match.
         </div>
-        <div class="invalid-feedback d-block" *ngIf="serverError">
-          {{ serverError }}
+        <div class="invalid-feedback d-block" *ngIf="errorMessage">
+          {{ errorMessage }}
         </div>
       </div>
      
