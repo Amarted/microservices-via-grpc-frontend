@@ -9,7 +9,7 @@ import {
   lastValueFrom,
   share,
 } from 'rxjs';
-import { HttpResponse } from '../../../application/interfaces/HttpResponse';
+import { HttpResponse } from '../../interfaces/HttpResponse';
 
 @Injectable()
 export class AuthApiService {

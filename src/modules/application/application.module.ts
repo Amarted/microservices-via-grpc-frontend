@@ -4,6 +4,7 @@ import { ApplicationRoutingModule } from './routing/routing.module';
 import { ApplicationComponent } from './application.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthModule } from '../auth/auth.module';
+import { AccessService } from './services/AccessService';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { AuthModule } from '../auth/auth.module';
     NgbModule,
     AuthModule,
   ],
-  providers: [],
+  providers: [
+    AccessService,
+  ],
   bootstrap: [
     ApplicationComponent,
   ],

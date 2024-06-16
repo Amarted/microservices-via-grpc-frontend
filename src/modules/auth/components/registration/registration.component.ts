@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { AuthApiService } from '../../services/auth-api/AuthApiService';
+import { AuthApiService } from '../../../application/services/auth-api/AuthApiService';
 import { RegistrationFormData } from '../registration-form/registration-form.component';
-import { AccessService } from '../../services/AccessService';
+import { AccessService } from '../../../application/services/AccessService';
 import { Router } from '@angular/router';
 
 @Component({
