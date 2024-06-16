@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { provideHttpClient } from '@angular/common/http';
 import { RegistrationApiService } from './services/registration-api/RegistrationApiService';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   providers: [
@@ -20,6 +21,7 @@ import { RegistrationApiService } from './services/registration-api/Registration
     CommonModule,
     FormsModule,
     LayoutModule,
+    RouterModule,
   ],
   exports: [
     RegistrationComponent,

@@ -1,6 +1,9 @@
 <app-centered-layout>
   <div class="registration-form container">
-    <h1 class="mb-4 row">Registration form</h1>
+
+    <h1 class="row">Registration form</h1>
+    <small class="row d-block text-muted mb-3">Already have account? <a routerLink="/sign-in">Sign In</a></small>
+
     <form (submit)="onFormSubmitClick()">
 
       <div class="form-floating mb-3 row">
