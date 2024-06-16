@@ -9,10 +9,10 @@ import {
   lastValueFrom,
   share,
 } from 'rxjs';
-import { HttpResponse } from '../../interfaces/HttpResponse';
+import { HttpResponse } from '../../../application/interfaces/HttpResponse';
 
 @Injectable()
-export class AuthApiService {
+export class RegistrationApiService {
   public constructor(
     private http: HttpClient,
   ) { }

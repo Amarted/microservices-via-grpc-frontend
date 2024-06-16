@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthApiService } from '../../../application/services/auth-api/AuthApiService';
+import { RegistrationApiService } from '../../services/registration-api/RegistrationApiService';
 import { RegistrationFormData } from '../registration-form/registration-form.component';
 import { AccessService } from '../../../application/services/AccessService';
 import { Router } from '@angular/router';
@@ -13,7 +13,7 @@ export class RegistrationComponent {
   public errorMessage: string | null = null;
 
   public constructor(
-    private authApi: AuthApiService,
+    private authApi: RegistrationApiService,
     private accessService: AccessService,
     private router: Router,
   ) {}
