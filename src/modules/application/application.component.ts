@@ -17,15 +17,25 @@ export class ApplicationComponent {
 
   private async initializeApplicaiton(): Promise<void> {
     this.accessService.initialize();
-
     if (!this.accessService.isAuthorized()) {
-      await this.router.navigate([
-        'registration',
-      ]);
+      if (!this.userIsOnRegistrationOrSignInPage()) {
+        await this.router.navigate([
+          'registration',
+        ]);
+      } else {
+        // User is on the registration or sign in page, just stay here
+      }
     } else {
       await this.router.navigate([
         '',
       ]);
     }
+  }
+
+  private userIsOnRegistrationOrSignInPage(): boolean {
+    return [
+      '/registration',
+      '/sign-in',
+    ].includes(window.location.pathname);
   }
 }
