@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthApiService } from '../../services/auth-api/AuthApiService';
 import { RegistrationFormData } from '../registration-form/registration-form.component';
+import { AccessService } from '../../services/AccessService';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -12,14 +14,20 @@ export class RegistrationComponent {
 
   public constructor(
     private authApi: AuthApiService,
+    private accessService: AccessService,
+    private router: Router,
   ) {}
 
   public async registration(data: RegistrationFormData): Promise<void> {
+    this.errorMessage = null;
     const response = await this.authApi.registration(data);
     if (response.status === 'failed') {
       this.errorMessage = response.errorMessage;
     } else {
-      this.errorMessage = null;
+      this.accessService.authorize(response.response.accessToken);
+      await this.router.navigate([
+        '',
+      ]);
     }
   }
 
