@@ -25,4 +25,4 @@ import { AuthApiService } from '../application/services/auth-api/AuthApiService'
     RegistrationComponent,
   ],
 })
-export class AuthModule { }
+export class RegistrationModule { }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LayoutModule } from '../../../layout/layout.module';
-import { AuthModule } from '../../../../auth/auth.module';
+import { RegistrationModule } from '../../../../registration/registration.module';
 
 @Component({
   selector: 'app-registration-page',
@@ -8,7 +8,7 @@ import { AuthModule } from '../../../../auth/auth.module';
   standalone: true,
   imports: [
     LayoutModule,
-    AuthModule,
+    RegistrationModule,
   ],
   styleUrl: './registration-page.component.sass',
 })

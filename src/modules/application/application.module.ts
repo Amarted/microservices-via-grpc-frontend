@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ApplicationRoutingModule } from './routing/routing.module';
 import { ApplicationComponent } from './application.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AuthModule } from '../auth/auth.module';
+import { RegistrationModule } from '../registration/registration.module';
 import { AccessService } from './services/AccessService';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { AccessService } from './services/AccessService';
     BrowserModule,
     ApplicationRoutingModule,
     NgbModule,
-    AuthModule,
+    RegistrationModule,
   ],
   providers: [
     AccessService,
