@@ -1,6 +1,7 @@
 export interface HttpSuccessfulResponse<ResponseType> {
   status: 'successful';
-  response?: ResponseType;
+  // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
+  response: ResponseType extends void ? never : ResponseType;
 }
 
 export interface HttpFailedResponse {
