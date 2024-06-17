@@ -5,6 +5,7 @@ import { ApplicationComponent } from './application.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegistrationModule } from '../registration/registration.module';
 import { AccessService } from './services/AccessService';
+import { SignInModule } from '../sign-in/sign-in.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AccessService } from './services/AccessService';
     ApplicationRoutingModule,
     NgbModule,
     RegistrationModule,
+    SignInModule,
   ],
   providers: [
     AccessService,

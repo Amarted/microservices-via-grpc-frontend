@@ -1,6 +1,5 @@
 /**
  * The description of the User Registration request endpoint including the  URL and the request and response data structures.
- * Has no response.
  */
 import { apiConfiguration } from '../../../../../configurations/api-configuration';
 
