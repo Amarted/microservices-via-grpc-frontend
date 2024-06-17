@@ -5,10 +5,10 @@ import { apiConfiguration } from '../../../../../configurations/api-configuratio
  */
 export const userGreetingsUrl = `${apiConfiguration.baseApiUrl}/user/greetings`;
 
-export interface UserGreetingsRequestData {
+export interface UserGreetingsRequest {
   username: string;
 }
 
-export interface UserGreetingsResponseData {
+export interface UserGreetingsResponse {
   greetings: string;
 }

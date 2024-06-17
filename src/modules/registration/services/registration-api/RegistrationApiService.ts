@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {
-  UserRegistrationRequestData,
-  UserRegistrationResponseData,
+  UserRegistrationRequest,
+  UserRegistrationResponse,
   userRegistrationUrl,
 } from './endpoints/RegistrationEndpoint';
 import {
@@ -17,8 +17,8 @@ export class RegistrationApiService {
     private http: HttpClient,
   ) { }
 
-  public async registration(requestData: UserRegistrationRequestData): Promise<HttpResponse<UserRegistrationResponseData>> {
-    const request = this.http.post<HttpResponse<UserRegistrationResponseData>>(userRegistrationUrl, requestData)
+  public async registration(requestData: UserRegistrationRequest): Promise<HttpResponse<UserRegistrationResponse>> {
+    const request = this.http.post<HttpResponse<UserRegistrationResponse>>(userRegistrationUrl, requestData)
       .pipe(
         share(),
       );

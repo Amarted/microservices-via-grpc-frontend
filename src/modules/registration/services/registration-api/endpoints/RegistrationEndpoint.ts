@@ -5,11 +5,11 @@ import { apiConfiguration } from '../../../../../configurations/api-configuratio
 
 export const userRegistrationUrl = `${apiConfiguration.baseApiUrl}/auth/registration`;
 
-export interface UserRegistrationRequestData {
+export interface UserRegistrationRequest {
   username: string;
   password: string;
 }
 
-export interface UserRegistrationResponseData {
+export interface UserRegistrationResponse {
   accessToken: string;
 }

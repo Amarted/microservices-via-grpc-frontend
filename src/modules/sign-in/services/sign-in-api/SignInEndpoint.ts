@@ -6,11 +6,11 @@ import { apiConfiguration } from '../../../../configurations/api-configuration';
 
 export const signInUrl = `${apiConfiguration.baseApiUrl}/auth/sign-in`;
 
-export interface SignInRequestData {
+export interface SignInRequest {
   username: string;
   password: string;
 }
 
-export interface SignInResponseData {
+export interface SignInResponse {
   accessToken: string;
 }

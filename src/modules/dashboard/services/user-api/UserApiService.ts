@@ -5,7 +5,7 @@ import {
   share,
 } from 'rxjs';
 import {
-  UserGreetingsRequestData, UserGreetingsResponseData, userGreetingsUrl,
+  UserGreetingsRequest, UserGreetingsResponse, userGreetingsUrl,
 } from './endpoints/UserGreetingsEndpoint';
 
 @Injectable()
@@ -13,8 +13,8 @@ export class UserApiService {
   public constructor(
     private http: HttpClient,
   ) { }
-  public async greetings(requestData: UserGreetingsRequestData): Promise<UserGreetingsResponseData> {
-    const request = this.http.post<UserGreetingsResponseData>(userGreetingsUrl, requestData)
+  public async greetings(requestData: UserGreetingsRequest): Promise<UserGreetingsResponse> {
+    const request = this.http.post<UserGreetingsResponse>(userGreetingsUrl, requestData)
       .pipe(
         share(),
       );

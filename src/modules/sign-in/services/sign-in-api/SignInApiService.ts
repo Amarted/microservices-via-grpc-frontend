@@ -6,8 +6,8 @@ import {
 } from 'rxjs';
 import { HttpResponse } from '../../../application/types/HttpResponse';
 import {
-  SignInRequestData,
-  SignInResponseData,
+  SignInRequest,
+  SignInResponse,
   signInUrl,
 } from './SignInEndpoint';
 
@@ -17,8 +17,8 @@ export class SignInApiService {
     private http: HttpClient,
   ) { }
 
-  public async signIn(requestData: SignInRequestData): Promise<HttpResponse<SignInResponseData>> {
-    const request = this.http.post<HttpResponse<SignInResponseData>>(signInUrl, requestData)
+  public async signIn(requestData: SignInRequest): Promise<HttpResponse<SignInResponse>> {
+    const request = this.http.post<HttpResponse<SignInResponse>>(signInUrl, requestData)
       .pipe(
         share(),
       );
